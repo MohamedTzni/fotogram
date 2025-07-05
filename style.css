@@ -12,3 +12,18 @@ body {
   background: #f0f0f0;
   color: #222;
 }
+.navBar {
+  height: 180px;
+  background: #00719f;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+}
+
+.navBar img {
+  height: 40px;
+  width: 180px;
+  margin-left: 24px;
+}
