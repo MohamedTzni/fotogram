@@ -20,3 +20,18 @@ const bigImg = document.getElementById("lightboxImg");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const closeBtn = document.getElementById("closeBtn");
+/* 3) Thumbnails erzeugen */
+for (let i = 0; i < pictures.length; i++) {
+  const thumb = document.createElement("img");
+  thumb.src   = pictures[i];
+  thumb.alt   = `Bild ${i + 1}`;
+  gallery.appendChild(thumb);
+
+  // Klick-Handler pro Thumbnail
+  ((index) => {
+    thumb.addEventListener("click", () => {
+      current = index;
+      openLightbox();
+    });
+  })(i);
+}
