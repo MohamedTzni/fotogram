@@ -23,8 +23,8 @@ const closeBtn = document.getElementById("closeBtn");
 /* 3) Thumbnails erzeugen */
 for (let i = 0; i < pictures.length; i++) {
   const thumb = document.createElement("img");
-  thumb.src   = pictures[i];
-  thumb.alt   = `Bild ${i + 1}`;
+  thumb.src = pictures[i];
+  thumb.alt = `Bild ${i + 1}`;
   gallery.appendChild(thumb);
 
   // Klick-Handler pro Thumbnail
@@ -34,4 +34,24 @@ for (let i = 0; i < pictures.length; i++) {
       openLightbox();
     });
   })(i);
+}
+/* 4) Lightbox-Funktionen */
+let current = 0;
+
+function openLightbox() {
+  bigImg.src = pictures[current];
+  bigImg.alt = `Bild ${current + 1}`;
+  lightbox.classList.remove("hidden");
+}
+
+function closeLightbox() {
+  lightbox.classList.add("hidden");
+}
+
+function changeImage(step) {
+  current += step;
+  if (current < 0) current = pictures.length - 1; // Rückwärts ans Ende
+  if (current >= pictures.length) current = 0; // Vorwärts zum Anfang
+  bigImg.src = pictures[current];
+  bigImg.alt = `Bild ${current + 1}`;
 }
