@@ -99,4 +99,26 @@ footer p {
   max-height: 60vh;
   border-radius: 10%;
 }
+.close {
+  align-self: flex-end;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+.arrowRow {
+  display: flex;
+  gap: 60px;
+  margin-top: 15px;
+}
+
+.arrow {
+  font-size: 48px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
 
