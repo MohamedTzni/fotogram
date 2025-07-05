@@ -55,3 +55,12 @@ function changeImage(step) {
   bigImg.src = pictures[current];
   bigImg.alt = `Bild ${current + 1}`;
 }
+/* 5) Event-Listener */
+prevBtn.addEventListener("click", () => changeImage(-1));
+nextBtn.addEventListener("click", () => changeImage(1));
+closeBtn.addEventListener("click", closeLightbox);
+
+// Klick auf das halbtransparente Overlay schließt den Dialog
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
