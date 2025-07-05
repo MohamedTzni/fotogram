@@ -9,32 +9,29 @@
   </head>
   <body>
     <header>
-  <nav class="navBar">
-    <img src="./img/Fotogram_Logo.svg" alt="Logo" />
-  </nav>
+      <nav class="navBar">
+        <img src="./img/Fotogram_Logo.svg" alt="Logo" />
+      </nav>
+    </header>
+    <main class="wrapper">
+      <div id="gallery" class="gallery"></div>
+    </main>
+    <footer>
+      <p>© 2025 | Mein Fotogram</p>
+    </footer>
+    <div id="lightbox" class="lightbox hidden">
+      <div class="dialog">
+        <span id="closeBtn" class="close" title="Schließen">&times;</span>
 
+        <img id="lightboxImg" src="" alt="Großes Bild" />
 
-</header>
-  <main class="wrapper">
-  <div id="gallery" class="gallery"></div>
-</main>
-<footer>
-  <p>© 2025 | Mein Fotogram</p>
-</footer>
-<div id="lightbox" class="lightbox hidden">
-  <div class="dialog">
-    <span id="closeBtn" class="close" title="Schließen">&times;</span>
-
-    <img id="lightboxImg" src="" alt="Großes Bild" />
-
-    <div class="arrowRow">
-      <span id="prevBtn" class="arrow" title="Zurück">&#10094;</span>
-      <span id="nextBtn" class="arrow" title="Weiter">&#10095;</span>
+        <div class="arrowRow">
+          <span id="prevBtn" class="arrow" title="Zurück">&#10094;</span>
+          <span id="nextBtn" class="arrow" title="Weiter">&#10095;</span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
   </body>
 </html>
