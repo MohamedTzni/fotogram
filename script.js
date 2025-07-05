@@ -64,3 +64,10 @@ closeBtn.addEventListener("click", closeLightbox);
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) closeLightbox();
 });
+// Tastatur-Steuerung
+document.addEventListener("keydown", (e) => {
+  if (lightbox.classList.contains("hidden")) return;
+  if (e.key === "Escape")      closeLightbox();
+  if (e.key === "ArrowLeft")   changeImage(-1);
+  if (e.key === "ArrowRight")  changeImage(1);
+});
